@@ -1,6 +1,9 @@
+import ProjectDisplay from "../components/ProjectDisplay";
+import About from "./About";
 
 export default function Home(){
     return (
+        <>
         <div className="px-4 py-5 my-5 text-center bg-light">
             <img className="d-block mx-auto mb-4" src="../assets/images/nyles.jpeg" alt="" width="72" height="57"/>
             <h1 className="display-5 fw-bold text-body-emphasis">I'm Nyles Pham</h1>
@@ -12,5 +15,20 @@ export default function Home(){
                 </div>
             </div>
         </div>
+        <About />
+        <section className="py-5 text-center container">
+          <div className="row py-lg-5">
+            <div className="col-lg-6 col-md-8 mx-auto">
+              <h1 className="fw-light">My Projects</h1>
+              <p className="lead text-body-secondary">Beside work, I also build my personal projects that tackle on real world problems.</p>
+              <p>
+                <a href="#" className="btn btn-dark my-2">More Details</a>
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        <ProjectDisplay />
+        </>
     )
 }
