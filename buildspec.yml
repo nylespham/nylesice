@@ -15,4 +15,4 @@ phases:
     post_build:
       commands:
         - echo Building
-        - aws s3 cp --resursive --acl public-read ./build s3://prod-e-commerce-0111/
+        - aws s3 cp ./build s3://prod-e-commerce-0111/
