@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      node.js: 20
+    pre_build:
+      commands:
+        - echo Installing source NPM dependencies...
+        - npm install
+    build:
+      commands:
+        - echo Build started on 'date'
+        - npm run build
+    post_build:
+      commands:
+        - echo Building
+        # - aws s3 cp --resursive --acl public-read ./build s3://my-bucket-name/

@@ -22,3 +22,5 @@
 npm-debug.log*
 
 package-lock.json
+infrastructure/.terraform/**/terraform-provider-aws_v5.41.0_x5
+infrastructure/.terraform.lock.hcl
