@@ -2,19 +2,19 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 20
+    commands:
+      - npm i npm@latest -g
+      - pip install --upgrade pip
+      - pip install --upgrade awscli
     pre_build:
       commands:
         - echo Installing source NPM dependencies...
         - npm install
-        - pip install --upgrade pip
-        - pip install --upgrade awscli
     build:
       commands:
         - echo Build started on 'date'
         - npm run build
     post_build:
       commands:
-        - echo Building
+        - echo Deplot to S3 Bucket
         - aws s3 cp ./build s3://prod-e-commerce-0111/
