@@ -8,6 +8,8 @@ phases:
       commands:
         - echo Installing source NPM dependencies...
         - npm install
+        - pip install --upgrade pip
+        - pip install --upgrade awscli
     build:
       commands:
         - echo Build started on 'date'
