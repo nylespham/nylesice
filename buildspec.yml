@@ -2,11 +2,12 @@ version: 0.2
 
 phases:
   install:
-    runtime-version: nodejs:20
-      commands:
-        - npm i npm@latest -g
-        - pip install --upgrade pip
-        - pip install --upgrade awscli
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - npm i npm@latest -g
+      - pip install --upgrade pip
+      - pip install --upgrade awscli
     pre_build:
       commands:
         - echo Installing source NPM dependencies...
