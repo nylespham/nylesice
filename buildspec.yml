@@ -13,4 +13,4 @@ phases:
         - npm run build
     post_build:
       commands:
-        - aws s3 sync ./build s3://sre-pe/
+        - aws s3 sync --recursive ./build s3://sre-pe/
