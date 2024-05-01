@@ -6,6 +6,10 @@ This is Nyles's Portfolio code repository.
 
 Amazon S3 + React + Route53
 
+## CI/CD
+
+AWS CodePipeline, AWS CodeBuild
+
 ## Available Scripts
 
 In the project directory, you can run:
