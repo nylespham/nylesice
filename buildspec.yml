@@ -10,9 +10,9 @@ phases:
     # pre_build:
     #   commands:
     #     - npm install
-    build:
-      commands:
-        - npm run build
-    post_build:
-      commands:
-        - aws s3 sync ./build s3://profile.nylesdev.com/
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 sync ./build s3://profile.nylesdev.com/
