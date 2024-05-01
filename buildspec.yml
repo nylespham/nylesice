@@ -5,10 +5,11 @@ phases:
     commands:
       # - pip install --upgrade pip
       # - pip install --upgrade awscli
-      - pip install awscli
-    pre_build:
-      commands:
-        - npm install
+      # - pip install awscli
+      - npm install
+    # pre_build:
+    #   commands:
+    #     - npm install
     build:
       commands:
         - npm run build
