@@ -3,8 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install --upgrade pip
-      - pip install --upgrade awscli
+      # - pip install --upgrade pip
+      # - pip install --upgrade awscli
+      - pip install awscli
     pre_build:
       commands:
         - npm install
@@ -13,4 +14,4 @@ phases:
         - npm run build
     post_build:
       commands:
-        - aws s3 sync  ./build s3://profile.nylesdev.com/
+        - aws s3 sync ./build s3://profile.nylesdev.com/
